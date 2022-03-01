@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int mySqrt(int x) {
+        //keep iterating until you find the closest number 
+        if (x <= 1) return x;
+        //make both long to allow large numbers to be processed
+        long ans = 0;
+        long count = 0;
+        while (ans <= x)
+        {
+            count++;
+            ans = (count * count);
+            
+        }
+        return count - 1;
+    }
+};
+
+//Binary search method - strip list by half if you don't find the product 
